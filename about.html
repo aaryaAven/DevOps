@@ -24,42 +24,57 @@
 
 		<style>
 			hr {
-				border: none;
-				height: 1px;
-				background-color: #c5c7c9;
-				margin: 20px 0;
-			}
-			/* Define the column layout */
-			.column {
-				width: 33.33%;
-				float: left;
-				padding: 20px;
-				box-sizing: border-box;
-			}
+    border: none;
+    height: 2px;
+    background: linear-gradient(to right, #c5c7c9, #8a8c8e);
+    margin: 30px 0;
+}
 
-			/* Clear floats after the columns */
-			.row:after {
-				content: "";
-				display: table;
-				clear: both;
-			}
+/* Define the column layout */
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
 
-			/* Responsive layout */
-			@media screen and (max-width: 1024px) {
-				.column {
-					width: 100%;
-				}
-			}
+.column {
+    flex: 1;
+    min-width: 280px;
+    padding: 20px;
+    box-sizing: border-box;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
 
-			/* Adjust font size for smaller screens */
-			@media screen and (max-width: 768px) {
-				h1 {
-					font-size: 22px;
-				}
-				p {
-					font-size: 14px;
-				}
-			}
+.column:hover {
+    transform: translateY(-5px);
+}
+
+/* Responsive layout */
+@media screen and (max-width: 1024px) {
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+    .column {
+        width: 90%;
+    }
+}
+
+/* Adjust font size for smaller screens */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 24px;
+    }
+    p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+}
+
 		</style>
 	</head>
 
